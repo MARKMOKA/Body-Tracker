@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="start-screen">
+    <h1>Body Tracker</h1>
+    <p>ابدا رحلتك دلوقتي وسجل بياناتك وخلي الكابتن مارك يساعدك توصل لافضل نسخة من نفسك</p>
+    <button id="startBtn">start</button>
+</div>
+<section class="info-screen">
+    <h2>سجل بياناتك</h2>
+    <input 
+    type="text"
+    id="name"
+    placeholder="اكتب اسمك">
+    <input 
+    type="number"
+    id="age"
+    placeholder="السن">
+    <input 
+    type="number"
+    id="height"
+    placeholder= "الطول">
+    <input 
+    type="number"
+    id="weight"
+    placeholder= "الوزن">
+    <select id="gender">
+        <option value="">اختر النوع</option>
+        <option>male</option>
+        <option>female</option>
+    </select>
+    <select id="goal">
+        <option value="">اختار هدفك</option>
+        <option>خسارة وزن</option>
+        <option>زيادة وزن</option>
+        <option>تثبيت الوزن</option>
+    </select>
+    <select id="activity">
+        <option value="">مستوي النشاط</option>
+        <option>قليل</option>
+        <option>متوسط</option>
+        <option>عالي</option>
+    </select>
+    <button id="analyzeBtn">ابدا التحليل</button>
+    <button id="clearBtn">🗑️ مسح البيانات</button>
+</section>
+<div class="report-screen" id="reportScreen">
+    <h2>تقرير الجسم 📊</h2>
+    <div class="report-box">
+        <p><strong>الاسم:</strong> <span id="reportName"></span></p>
+        <p><strong>الطول:</strong> <span id="reportHeight"></span></p>
+        <p><strong>الوزن:</strong> <span id="reportWeight"></span></p>
+        <p><strong>BMI:</strong> <span id="reportBMI"></span></p>
+        <div class="bmi-bar">
+        <div id="bmiProgress"></div>
+        </div>
+        <p><strong>الحالة:</strong> <span id="reportStatus"></span></p>
+        <p><strong>الهدف:</strong> <span id="reportGoal"></span></p>
+        <p><strong>المياه:</strong> <span id="reportWater"></span></p>
+        <p><strong>السعرات:</strong> <span id="reportCalories"></span></p>
+        <p><strong>الخطوات:</strong> <span id="reportSteps"></span></p>
+        <p><strong>التمارين:</strong> <span id="reportWorkout"></span></p>
+        <div class="history-box">
+        <h3>📅 سجل التحليلات</h3>
+        <ul id="historyList"></ul>
+        </div>
+    </div>
+    <div class="advice-box">
+        <h3>نصيحة اليوم 💡</h3>
+        <p id="reportAdvice"></p>
+        <p id="test"></p>
+    </div>
+    <div class="plan-box">
+
+    <h3>📅 خطة الأسبوع</h3>
+
+    <ul id="weeklyPlan"></ul>
+
+</div>
+<div class="motivation-box">
+
+    <h3>🚀 رسالة من الكابتن مارك</h3>
+
+    <p id="motivation"></p>
+
+</div>
+<div class="progress-box">
+
+    <h3>🎯 التقدم نحو الهدف</h3>
+
+    <div class="goal-bar">
+
+        <div id="goalProgress"></div>
+
+    </div>
+
+    <p id="goalPercent"></p>
+
+</div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
