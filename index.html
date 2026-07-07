@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="start-screen">
+<div class="start-screen screen-bg-start">
     <h1>Body Tracker</h1>
     <p>ابدا رحلتك دلوقتي وسجل بياناتك وخلي الكابتن مارك يساعدك توصل لافضل نسخة من نفسك</p>
     <button id="startBtn">start</button>
 </div>
-<section class="info-screen">
+<section class="info-screen screen-bg-start">
     <h2>سجل بياناتك</h2>
     <input 
     type="text"
@@ -48,61 +48,120 @@
         <option>عالي</option>
     </select>
     <button id="analyzeBtn">ابدا التحليل</button>
-    <button id="clearBtn">🗑️ مسح البيانات</button>
+    
 </section>
-<div class="report-screen" id="reportScreen">
-    <h2>تقرير الجسم 📊</h2>
-    <div class="report-box">
-        <p><strong>الاسم:</strong> <span id="reportName"></span></p>
-        <p><strong>الطول:</strong> <span id="reportHeight"></span></p>
-        <p><strong>الوزن:</strong> <span id="reportWeight"></span></p>
-        <p><strong>BMI:</strong> <span id="reportBMI"></span></p>
-        <div class="bmi-bar">
-        <div id="bmiProgress"></div>
+<div class="report-screen screen-bg-report" id="reportScreen">
+
+    <!-- Dashboard -->
+    <section class="tab active" id="dashboard">
+
+        <div class="top-message">
+            <p id="motivation"></p>
+            <p id="reportAdvice"></p>
         </div>
-        <p><strong>الحالة:</strong> <span id="reportStatus"></span></p>
-        <p><strong>الهدف:</strong> <span id="reportGoal"></span></p>
-        <p><strong>المياه:</strong> <span id="reportWater"></span></p>
-        <p><strong>السعرات:</strong> <span id="reportCalories"></span></p>
-        <p><strong>الخطوات:</strong> <span id="reportSteps"></span></p>
-        <p><strong>التمارين:</strong> <span id="reportWorkout"></span></p>
-        <div class="history-box">
-        <h3>📅 سجل التحليلات</h3>
-        <ul id="historyList"></ul>
+
+        <div class="report-box">
+
+            <p><strong>الاسم:</strong> <span id="reportName"></span></p>
+
+            <p><strong>الطول:</strong> <span id="reportHeight"></span></p>
+
+            <p><strong>الوزن:</strong> <span id="reportWeight"></span></p>
+
+            <p><strong>BMI:</strong> <span id="reportBMI"></span></p>
+
+            <div class="bmi-bar">
+                <div id="bmiProgress"></div>
+            </div>
+
+            <p><strong>الحالة:</strong> <span id="reportStatus"></span></p>
+
+            <p><strong>المياه:</strong> <span id="reportWater"></span></p>
+
+            <p><strong>السعرات:</strong> <span id="reportCalories"></span></p>
+
+            <p><strong>الخطوات:</strong> <span id="reportSteps"></span></p>
+
+            <h3>🎯 التقدم</h3>
+
+            <div class="goal-bar">
+                <div id="goalProgress"></div>
+            </div>
+
+            <p id="goalPercent"></p>
+
         </div>
-    </div>
-    <div class="advice-box">
-        <h3>نصيحة اليوم 💡</h3>
-        <p id="reportAdvice"></p>
-        <p id="test"></p>
-    </div>
-    <div class="plan-box">
 
-    <h3>📅 خطة الأسبوع</h3>
+    </section>
 
-    <ul id="weeklyPlan"></ul>
 
-</div>
-<div class="motivation-box">
+    <section class="tab" id="plan">
 
-    <h3>🚀 رسالة من الكابتن مارك</h3>
+        <div class="report-box screen-bg-plan">
 
-    <p id="motivation"></p>
+            <p><strong>التمارين:</strong> <span id="reportWorkout"></span></p>
 
-</div>
-<div class="progress-box">
+            <h3>الخطة الأسبوعية</h3>
 
-    <h3>🎯 التقدم نحو الهدف</h3>
+            <ul id="weeklyPlan"></ul>
 
-    <div class="goal-bar">
+        </div>
 
-        <div id="goalProgress"></div>
+    </section>
 
-    </div>
 
-    <p id="goalPercent"></p>
+    <section class="tab" id="history">
 
-</div>
+        <div class="history-box screen-bg-history">
+
+            <h3>سجل التحليلات</h3>
+
+            <ul id="historyList"></ul>
+
+        </div>
+
+    </section>
+
+
+    <section class="tab" id="settings">
+
+        <div class="report-box screen-bg-settings">
+
+            <p><strong>الهدف:</strong> <span id="reportGoal"></span></p>
+
+            <button id="clearBtn">
+                🗑️ مسح البيانات
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <nav class="bottom-nav">
+
+        <button class="nav-btn active" data-tab="dashboard">
+            🏠
+            <span>الرئيسية</span>
+        </button>
+
+        <button class="nav-btn" data-tab="plan">
+            💪
+            <span>الخطة</span>
+        </button>
+
+        <button class="nav-btn" data-tab="history">
+            📈
+            <span>السجل</span>
+        </button>
+
+        <button class="nav-btn" data-tab="settings">
+            ⚙️
+            <span>الإعدادات</span>
+        </button>
+
+    </nav>
+
 </div>
     <script src="script.js"></script>
 </body>
