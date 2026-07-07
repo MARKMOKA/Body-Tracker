@@ -216,3 +216,140 @@ button:hover{
     border-radius:8px;
 
 }
+
+.tab{
+
+    display:none;
+    animation:fade .4s;
+
+}
+
+.tab.active{
+
+    display:block;
+
+}
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    background:#16202c;
+
+    padding:12px 0;
+
+    border-top:2px solid cyan;
+
+}
+
+.nav-btn{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:5px;
+
+    font-size:18px;
+
+}
+
+.nav-btn.active{
+
+    color:cyan;
+
+}
+
+.top-message{
+
+    background:#203040;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+.chart-placeholder{
+
+    margin-top:30px;
+
+    border:2px dashed cyan;
+
+    padding:50px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    color:#aaa;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.screen-bg-start,
+.screen-bg-report,
+.screen-bg-plan,
+.screen-bg-history,
+.screen-bg-settings{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.screen-bg-start{
+    background-image: url("photo/home.jpg");
+}
+.screen-bg-report{
+    background-image: url("photo/report.jpg");
+}
+.screen-bg-plan{
+    background-image: url("photo/plan.jpg");
+}
+.screen-bg-history{
+    background-image: url("photo/history.jpg");
+}
+.screen-bg-settings{
+    background-image: url("photo/settings.jpg");
+}
